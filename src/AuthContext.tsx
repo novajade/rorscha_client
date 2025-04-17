@@ -29,7 +29,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       return;
     }
 
-    fetch(`${process.env.REACT_APP_API_URL}/auth/login-check`, {
+    const apiUrl =
+    process.env.NODE_ENV === "production"
+      ? process.env.REACT_APP_API_URL_PROD
+      : process.env.REACT_APP_API_URL_LOCAL;
+
+  fetch(`${apiUrl}/auth/login-check`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id_token: token })

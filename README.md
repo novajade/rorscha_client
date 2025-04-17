@@ -1,6 +1,6 @@
 # Webpage Application (Portforlio & Personal App)
-Portforlio webapge.
-On the other hand, there is structure for personal use application.
+Portforlio webapge run on Firebase.
+There is structure for personal use application.
 Only the page structure is visible.
 
 
